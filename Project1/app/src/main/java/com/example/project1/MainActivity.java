@@ -1,130 +1,73 @@
 package com.example.project1;
 
-import static android.graphics.Color.convert;
-
-import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Spinner;
-import android.widget.TextView;
-
+import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText inputValue;
-    Spinner fromUnit, toUnit;
-    TextView resultText;
-
     String[] units = {"Feet", "Inches", "Centimeters", "Meters", "Yards"};
-
-    Map<String, Double> unitToMeter = new HashMap<>();
+    Spinner fromSpinner, toSpinner;
+    EditText inputValue;
+    TextView resultText;
+    Button convertButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
-        // Linking the UI elements
         inputValue = findViewById(R.id.inputValue);
-        fromUnit = findViewById(R.id.fromUnit);
-        toUnit = findViewById(R.id.toUnit);
+        fromSpinner = findViewById(R.id.fromUnit);
+        toSpinner = findViewById(R.id.toUnit);
         resultText = findViewById(R.id.resultText);
+        convertButton = findViewById(R.id.convertButton);
 
-        // Unit to meter conversion factors
-        unitToMeter.put("Feet", 0.3048);
-        unitToMeter.put("Inches", 0.0254);
-        unitToMeter.put("Centimeters", 0.01);
-        unitToMeter.put("Meters", 1.0);
-        unitToMeter.put("Yards", 0.9144);
-
-        // setting the adapters for spinners
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, units);
-        fromUnit.setAdapter(adapter);
-        toUnit.setAdapter(adapter);
+        fromSpinner.setAdapter(adapter);
+        toSpinner.setAdapter(adapter);
 
-        // Listener to update result
-        inputValue.addTextChangedListener(new TextWatcher() {
+        convertButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
+            public void onClick(View view) {
+                String inputStr = inputValue.getText().toString();
+                if (inputStr.isEmpty()) {
+                    resultText.setText("Please enter a value");
+                    return;
+                }
 
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                convert();
+                double input = Double.parseDouble(inputStr);
+                String fromUnit = fromSpinner.getSelectedItem().toString();
+                String toUnit = toSpinner.getSelectedItem().toString();
+
+                double meters = toMeters(input, fromUnit);
+                double result = fromMeters(meters, toUnit);
+
+                resultText.setText(String.format("%.4f %s", result, toUnit));
             }
-
-            @Override
-            public void afterTextChanged(Editable s) { }
         });
-
-        fromUnit.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, android.view.View view, int position, long id) {
-                convert();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) { }
-        });
-
-        toUnit.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, android.view.View view, int position, long id) {
-                convert();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) { }
-        });
-
-        Button settingsBtn = findViewById(R.id.settingsButton);
-        settingsBtn.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-            startActivity(intent);
-        });
-
     }
-    // Conversion logic
-    private void convert() {
-        String inputStr = inputValue.getText().toString();
 
-        if (inputStr.isEmpty()) {
-            resultText.setText("Converted Value");
-            return;
+    double toMeters(double value, String unit) {
+        switch (unit) {
+            case "Feet": return value * 0.3048;
+            case "Inches": return value * 0.0254;
+            case "Centimeters": return value * 0.01;
+            case "Meters": return value;
+            case "Yards": return value * 0.9144;
+            default: return value;
         }
-        try {
-            double input = Double.parseDouble(inputStr);
-            String from = fromUnit.getSelectedItem().toString();
-            String to = toUnit.getSelectedItem().toString();
+    }
 
-            double meters = input * unitToMeter.get(from);
-            double result = meters / unitToMeter.get(to);
-
-            resultText.setText(String.format("%.4f %s", result, to));
-        } catch (NumberFormatException e) {
-            resultText.setText("Invalid input");
+    double fromMeters(double value, String unit) {
+        switch (unit) {
+            case "Feet": return value / 0.3048;
+            case "Inches": return value / 0.0254;
+            case "Centimeters": return value / 0.01;
+            case "Meters": return value;
+            case "Yards": return value / 0.9144;
+            default: return value;
         }
     }
 }

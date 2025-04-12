@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.project1"
-        minSdk = 16
+        minSdk = 21  // ✅ Updated from 19 to 21
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -25,21 +25,23 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
     buildFeatures {
         viewBinding = true
     }
 }
 
 dependencies {
-
+    implementation ("androidx.cardview:cardview:1.0.0")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
-    implementation(libs.constraintlayout)
+    implementation(libs.constraintlayout)  // ✅ works fine now with minSdk 21
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
     testImplementation(libs.junit)
