@@ -1,5 +1,12 @@
+//plugins {
+//    id("com.google.gms.google-services")
+//    alias(libs.plugins.android.application)
+//    alias(libs.plugins.google.gms.google.services)
+//}
+
 plugins {
-    alias(libs.plugins.android.application)
+    id("com.android.application")
+    id("com.google.gms.google-services") // Only this one plugin block
 }
 
 android {
@@ -8,7 +15,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.project4"
-        minSdk = 16
+        minSdk = 23
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -32,11 +39,14 @@ android {
 }
 
 dependencies {
-
+    implementation(libs.firebase.auth)
+    implementation (libs.firebase.auth)
+    implementation ("com.google.android.gms:play-services-auth:21.3.0")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation(libs.firebase.auth)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

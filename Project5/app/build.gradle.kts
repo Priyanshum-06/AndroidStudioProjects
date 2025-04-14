@@ -32,6 +32,9 @@ android {
 }
 
 dependencies {
+    dependencies {
+    }
+
     implementation ("androidx.preference:preference:1.1.1")  // or the latest version
 
     implementation("androidx.appcompat:appcompat:1.6.1")
@@ -42,6 +45,8 @@ dependencies {
     // If using legacy camera
     implementation("androidx.activity:activity:1.8.0")
 
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
 
     implementation(libs.appcompat)
     implementation(libs.material)
