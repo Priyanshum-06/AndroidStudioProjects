@@ -5,32 +5,17 @@
       <config />
     </shared>
     <layouts>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_camera.xml">
-        <config>
-          <theme>@style/Theme.Project5</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_gallery.xml">
-        <config>
-          <theme>@style/Theme.Project5</theme>
-        </config>
-      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
         <config>
           <theme>@style/Theme.Project5</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/image_item.xml">
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/file_paths.xml">
         <config>
           <theme>@style/Theme.Project5</theme>
         </config>
       </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/xml/file_paths.xml">
-        <config>
-          <theme>@style/Theme.Project5</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/xml/preferences.xml">
         <config>
           <theme>@style/Theme.Project5</theme>
         </config>
@@ -42,41 +27,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5623b93a-3988-4829-b8d0-6d774547ce3f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/xml/file_paths.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project5/PermissionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project1/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1/app/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project2/.gradle/8.10.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Project2/.gradle/8.10.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project2/.gradle/8.10.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Project2/.gradle/8.10.2/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Project2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project2/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/../Project2/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project2/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project2/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project2/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project2/app/src/main/res/values/themes.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project3/.gradle/8.10.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Project3/.gradle/8.10.2/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project3/.gradle/8.10.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Project3/.gradle/8.10.2/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project3/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Project3/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project3/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/../Project3/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project4/.gradle/8.10.2/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Project4/.gradle/8.10.2/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project4/.gradle/8.10.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Project4/.gradle/8.10.2/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project3/app/src/main/java/com/example/project3/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Project3/app/src/main/java/com/example/project3/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project4/.gradle/8.10.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Project4/.gradle/8.10.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project4/.gradle/8.10.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Project4/.gradle/8.10.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project4/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Project4/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project4/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/../Project4/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project4/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project4/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project4/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project4/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project4/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../Project4/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/project5/GalleryActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project5/GalleryActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/project5/ImageAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project5/ImageAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/project5/CameraActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project5/CameraManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/project5/GalleryActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/project5/ImageAdapter.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/project5/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project5/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_gallery.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_gallery.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_camera.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/file_paths.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_gallery.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/image_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/image_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/image_item.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/file_paths.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/file_paths.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/preferences.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,8 +101,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="resourceFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -156,6 +145,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.project5" />
+    </key>
+    <key name="android.template.827704836">
       <recent name="com.example.project5" />
     </key>
   </component>
@@ -247,6 +239,16 @@
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
       <map>
+        <entry key="com.example.mad_project">
+          <value>
+            <CheckInfo lastCheckTimestamp="1744659484228" />
+          </value>
+        </entry>
+        <entry key="com.example.mad_project.test">
+          <value>
+            <CheckInfo lastCheckTimestamp="1744659484252" />
+          </value>
+        </entry>
         <entry key="com.example.project5">
           <value>
             <CheckInfo lastCheckTimestamp="1744609865428" />
